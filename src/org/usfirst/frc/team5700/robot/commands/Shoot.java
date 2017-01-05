@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class Shoot extends Command {
 
     public Shoot() {
+    	System.out.println("About to require Robot.shooter inside Shoot");
         // Use requires() here to declare subsystem dependencies
         requires(Robot.shooter);
     }
@@ -24,7 +25,7 @@ public class Shoot extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+		return false;
     }
 
     // Called once after isFinished returns true

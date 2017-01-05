@@ -1,7 +1,7 @@
 package org.usfirst.frc.team5700.robot;
 
+import org.usfirst.frc.team5700.robot.commands.Shoot;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
@@ -10,9 +10,12 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
  
-    Joystick stick = new Joystick(0);
-    Button shootButton = new JoystickButton(stick, 1);
-    
-    button.whenPressed(new Shoot());
+	private Joystick stick = new Joystick(2);
+	
+	public OI() {
+		JoystickButton auxTrigger = new JoystickButton(stick, 1);
+		
+		auxTrigger.whenPressed(new Shoot());
+	}
 }
 
